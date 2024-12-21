@@ -3,11 +3,12 @@
 import { useRef, useState, useEffect } from "react";
 import io from "socket.io-client";
 
-const socket = io('/', {
+const socket = io('http://localhost:3000', {
     path: '/socket.io',
 });
 
 console.log("socket", socket);
+
 export default function AudioCall() {
     const [callActive, setCallActive] = useState(false);
     const [callTime, setCallTime] = useState(0);
