@@ -11,8 +11,7 @@ export const GET = async (req: SocketRequest) => {
         if (req.socket && !req.socket.server.io) {
             const io = new Server(req.socket.server, {
                 cors: {
-                    origin: "https://audio-call-eta.vercel.app",
-                    methods: ['GET', 'POST'],
+                    origin: "http://localhost:3000",
                     credentials: true,
                 },
             });
